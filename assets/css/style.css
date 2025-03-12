@@ -391,11 +391,12 @@ body {
 
 .home-container{
     height: 100vh;
-
+    margin: 0;
+    max-width: 100%;
 }
 .home-container .sue-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .avatar-container{
@@ -420,12 +421,12 @@ body {
 
 .home-social{
     position:absolute;
-    left: 0;
+    left: 50px;
 
 }
 .home-social span{
     position: absolute;
-    left: 0;
+    left: 8px;
     color: var(--color-01);
     font-size: var(--tiny-font-size);
     white-space: nowrap;
@@ -492,8 +493,8 @@ body {
 
 }
 .home-scroll-btn{
-    position:relative;
-    right: -5px;
+    position:absolute;
+    right: 50px;
     color: var(--color-01);
     display: grid;
     justify-items: center;
