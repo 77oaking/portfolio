@@ -102,6 +102,37 @@ body {
     height: 100%;
 
 }
+.sue-sub-container{
+    padding-top: 7em;
+    padding-bottom: 5em;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 95px;
+}
+.section-title h3{
+    color: var(--color-01);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+}
+.section-title p{
+    color: var(--color-04);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-regular);
+}
+
+.section-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 75px;
+}
+
 
 .sue-header {
     z-index: var(--z-fixed);
@@ -531,4 +562,76 @@ body {
 .home-scroll-btn i{
     font-size: 2rem;
 
+}
+.about-img{
+    position: relative;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+
+}
+.about-img img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-details{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-info .iam{
+    color: var(--color-02);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 30px;
+}
+.about-description{
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-regular);
+    line-height: 25px;
+    margin-bottom: 30px;
+
+}
+.pro-list{
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    column-gap: 10px;
+    row-gap: 12px;
+    margin: 38px 0;
+
+}
+.pro-card{
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 35px 25px;
+    border-radius: 5px;
+    text-align: left;
+
+}
+.pro-card span{
+    color: var(--primary);
+    font-size: 2.75rem;
+    font-weight: var(--font-bold);
+
+}
+.pro-card p{
+    color: var(--color-02);
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-regular);
+    line-height: 20px;
+    max-width: 100px;
+}
+.about-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 25px;
 }
