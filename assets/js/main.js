@@ -17,7 +17,11 @@ var resumeTabNav= function(resumeTabClick){
    });
 
    resumeTabContents[resumeTabClick].style.display = "flex";
-   resumeTabContents[resumeTabClick].classList.add("active");
+
+   setTimeout(() => {
+      resumeTabContents[resumeTabClick].classList.add("active");
+   }, 1000);
+   
    resumePortfolioTabsBtns[resumeTabClick].classList.add("active");
 
 };
