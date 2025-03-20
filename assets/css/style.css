@@ -47,7 +47,7 @@
     --z-content: 100;
     --z-tooltip: 1000;
     --z-fixed: 1100;
-    --z-ovcerlay: 1110;
+    --z-overlay: 1110;
     --z-modal: 1990;
     --z-max: 9999;
 }
@@ -899,7 +899,7 @@ body {
 }
 
 .service-modal-backdrop{
-    z-index: var(--z-ovcerlay);
+    z-index: var(--z-overlay);
     position: fixed;
     background: var(--modal-backdrop-bg);
     backdrop-filter: blur(10px);
@@ -1016,4 +1016,179 @@ body {
     transform: scale(1);
     opacity: 1;
     transition: transform .5s ease, opacity .5s ease;
+}
+
+
+.portfolio-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 15px;
+    margin-bottom: 85px;
+}
+.portfolio-tabs .tab-btn{
+    color: var(--color-01);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-normal);
+    padding: 12px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+.portfolio-tabs .tab-btn:hover{
+    color: var(--hover-color);
+}   
+.portfolio-tabs .tab-btn.active{
+    color: var(--dark-color);
+    background: var(--primary);
+    padding: 12px 15px;
+}   
+.portfolio-tabs .tab-btn.active:hover{
+    color: var(--white-color);
+    background: var(--hover-color);
+}   
+.portfolio-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 55px;
+
+}
+
+.portfolio-container .card-with-modal{
+    display: block;
+
+}
+.portfolio-container .card-with-modal.hidden{
+    display: none;
+
+}
+
+
+.portfolio-card{
+    position: relative;
+    background: var(--card-bg);
+    width: 350px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.portfolio-card .card-img{
+    width: 100%;
+
+}
+.portfolio-card .card-img img{
+    width: 100%;
+    border-radius: 10px;
+}   
+.portfolio-card .card-info{
+    position: relative;
+    padding: 10px 15px 20px 20px;
+
+}
+.portfolio-card .card-info span{
+    color: var(--color-04);
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-regular);
+    text-transform: uppercase;
+}
+.portfolio-card .card-info h4{
+    color: var(--color-02);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-medium);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.portfolio-card .card-info i{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: var(--primary);
+    font-size: 1.7rem;
+    margin: 15px;
+    transform: scale(0);
+    transition: .3s;
+}
+.portfolio-card:hover .card-info i{
+    transform: scale(1);
+}
+
+.portfolio-modal-backdrop{
+    z-index: var(--z-overlay);
+    position: fixed;
+    background: var(--modal-backdrop-bg);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.portfolio-modal-backdrop.active{
+    display: flex;
+    opacity: 1;
+    transition: opacity .5s ease;
+}   
+
+.portfolio-modal-backdrop::-webkit-scrollbar{
+    width: 8px;
+    background: hsl(var(--hue) 25% 20%);
+    border-radius: 5px;
+}   
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    border-radius: 5px;
+}
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb:hover{
+    background: var(--hover-color);
+}
+
+.portfolio-modal{
+    position: relative;
+    background: var(--color-03);
+    max-width: 900px;
+    height: fit-content;
+    margin: 75px 25px;
+    padding: 50px 45px;
+    border-radius: 15px;
+    transform:  scale(0);
+    opacity: 0;
+}
+
+.portfolio-modal.active{
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .5s ease, opacity .5s ease;
+}
+.portfolio-modal .modal-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    justify-content: center;
+}
+.portfolio-modal .modal-img{
+    width: 100%;
+}
+.portfolio-modal .modal-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}   
+.portfolio-modal .modal-content .modal-title{
+    color: var(--color-02);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-semi-bold);
+}
+.portfolio-modal .modal-content .description{
+    color: var(--color-04);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-regular);
+    line-height: 25px;
 }
