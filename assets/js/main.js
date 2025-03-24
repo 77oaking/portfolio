@@ -93,18 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
                setTimeout(() => {
                   cardWithModal.style.opacity = "1";
                   cardWithModal.style.transition = ".5s ease";
-                  
+
                }, 1000);
-            }else{
+            } else {
                cardWithModal.classList.add("hidden");
                setTimeout(() => {
                   cardWithModal.style.opacity = "0";
                   cardWithModal.style.transition = ".5s ease";
-                  
+
                }, 1000);
 
-         }});
-         
+            }
+         });
+
          portfolioTabsBtns.forEach((portfolioTabsBtn) => {
             portfolioTabsBtn.classList.remove("active");
          });
@@ -120,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
 ===================================================== */
 const portfolioCardWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
 portfolioCardWithModals.forEach((portfolioCardWithModal) => {
-   const portfolioCard= portfolioCardWithModal.querySelector(".portfolio-card");
-   const portfolioBackdrop= portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
-   const modalCloseBtn= portfolioCardWithModal.querySelector(".modal-close-btn");
-   const portfolioModal= portfolioCardWithModal.querySelector(".portfolio-modal");
-   
+   const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
+   const portfolioBackdrop = portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
+   const modalCloseBtn = portfolioCardWithModal.querySelector(".modal-close-btn");
+   const portfolioModal = portfolioCardWithModal.querySelector(".portfolio-modal");
+
 
    portfolioCard.addEventListener('click', () => {
       portfolioBackdrop.style.display = "flex";
@@ -151,6 +152,19 @@ portfolioCardWithModals.forEach((portfolioCardWithModal) => {
 /* =====================================================
    Testimonial Swiper
 ===================================================== */
+var swiper = new Swiper(".sue-client-swiper", {
+   slidesPerView: 1,
+   spaceBetween: 30,
+   loop: true,
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+   },
+   navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+   },
+});
 
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
