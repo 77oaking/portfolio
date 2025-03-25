@@ -152,7 +152,7 @@ portfolioCardWithModals.forEach((portfolioCardWithModal) => {
 /* =====================================================
    Testimonial Swiper
 ===================================================== */
-var swiper = new Swiper(".sue-client-swiper", {
+/* var swiper = new Swiper(".sue-client-swiper", {
    slidesPerView: 1,
    spaceBetween: 30,
    loop: true,
@@ -165,10 +165,32 @@ var swiper = new Swiper(".sue-client-swiper", {
       prevEl: ".swiper-button-prev",
    },
 });
-
+ */
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
 ===================================================== */
+
+
+
+sueContactForm = document.getElementById("sue-contact-form");
+sueContactFormAlert= document.querySelector(".contact-form-alert");
+sueContactForm.addEventListener('submit', function(event) {
+   event.preventDefault();
+   // these IDs from the previous steps
+   emailjs.sendForm('service_welxzeh', 'template_6om4x4l', '#sue-contact-form')
+       .then(() => {
+         console.log('SUCCESS!');
+         sueContactFormAlert.innerHTML = "<span>Your Message sent Successfully</span>";
+         setTimeout(() => {
+            
+            sueContactForm.reset();
+         }, 1000);
+       }, (error) => {
+         console.log('FAILED...', error);
+         sueContactFormAlert.innerHTML = "<span>Message Not Sent<i class='ri-error-warning-fill'></i></span>";
+         sueContactFormAlert.title = error;
+       });
+});
 
 /* =====================================================
    Shrink the height of the header on scroll

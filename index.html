@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+     <!-- <meta http-equiv="refresh" content="5" /> -->
 
 </head>
 
@@ -45,7 +46,7 @@
                     <li class="menu-item"><a href="#home" class="current"><i
                                 class="ri-home-4-line"></i><span>Home</span></a></li>
                     <li class="menu-item"><a href="#about"><i class="ri-user-line "></i><span>About</span></a></li>
-                    <li class="menu-item"><a href="#resume"><i class="ri-user-line "></i><span>Resume</span></a></li>
+                    <li class="menu-item"><a href="#resume"><i class="ri-article-line"></i><span>Resume</span></a></li>
                     <li class="menu-item"><a href="#service"><i class="ri-service-line"></i><span>Service</span></a>
                     </li>
                     <li class="menu-item"><a href="#portfolio"><i
@@ -1017,8 +1018,104 @@
 
         </div>
     </section>
+    <section class="sue-section nav-menu-section" id="contact">
+        <div class="sue-container sue-sub-container">
+            <div class="sue-wrapper">
+                <div class="section-title">
+                    <h3>Contact me</h3>
+                    <p>Get in Touch</p>
+                </div>
+                <div class="section-content">
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Contact Info</h3>
+                            <ul class="contact-details">
+
+                                <li class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="ri-mail-send-fill"></i>
+                                    </div>
+                                    <div class="contact-method">
+                                        <span>E-mail</span>
+                                        <h4>978aho@gmail.com</h4>
+                                        <a href="mailto:978aho@gmail.com" target="_blank"><i class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </li>
+
+                                <li class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="ri-messenger-fill"></i>
+                                    </div>
+                                    <div class="contact-method">
+                                        <span>Messenger</span>
+                                        <h4>Az.de.Oaking</h4>
+                                        <a href="http://m.me/az.de.oaking" target="_blank"><i class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </li>
+
+                                <li class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="ri-whatsapp-line"></i>
+                                    </div>
+                                    <div class="contact-method">
+                                        <span>Whatsapp</span>
+                                        <h4>+8801864411104</h4>
+                                        <a href="https://wa.me/1864411104" target="_blank"><i class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <h3>Social Info</h3>
+                            <ul class="contact-social-links">
+                                <li><a href="https://www.facebook.com/az.de.oaking/"><i class="ri-facebook-fill"></i></a></li>
+                                <li><a href="https://x.com/AzmanHossain6"><i class="ri-twitter-fill"></i></a></li>
+                                <li><a href="www.linkedin.com/in/azman-hossain"><i class="ri-linkedin-fill"></i></a></li>
+                                <li><a href="https://github.com/77oaking"><i class="ri-github-fill"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="contact-form-body">
+                            <h2>Let's Work <span>Together.</span></h2>
+                            <p>Please Fill out the form on this section to contact with me. Or call between 1:00 p.m and 11:00 P.M</p>
+                            <form action="" method="POST" id="sue-contact-form">
+                                <div class="input-group">
+                                    <input type="text" name="full-name" placeholder="Your Name" required>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" name="email" placeholder="Email *" required>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" name="subject" placeholder="Your Topic " required>
+                                </div>
+                                <div class="input-group">
+                                    <textarea name="message" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="input-group send-message">
+                                    <button class="sue-main-btn fill-btn submit-btn" type="submit" name="submit">Send Message</button>
+                                    <div class="contact-form-alert"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
     <script src="assets/js/main.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/emailjs.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 <script>
     var swiper = new Swiper(".sue-client-swiper", {
@@ -1034,6 +1131,13 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    (function() {
+   // https://dashboard.emailjs.com/admin/account
+   emailjs.init({
+     publicKey: "FLbDvQruwT63tJL1l",
+   });
+})();
   </script>
 </body>
 </html>
