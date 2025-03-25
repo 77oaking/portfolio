@@ -475,7 +475,8 @@ body {
 }
 
 .home-social {
-    position: absolute;
+    position: fixed;
+    z-index: var(--z-fixed);
     left: 50px;
 
 }
@@ -1314,7 +1315,7 @@ body {
     height: 275px;
 }
 
-.swiper-slide {
+.swiper-wrapper .swiper-slide {
     text-align: center;
     height: 100%;
     display: flex;
@@ -1332,14 +1333,26 @@ body {
     border-radius: 10px;
 }
 
-.swiper-slide .client-details{
+.swiper-slide .client-details {
     max-width: 500px;
     text-align: center;
 }
 
-.swiper-slide .client-details h3{
+.swiper-slide .client-details h3 {
     color: var(--color-02);
     font-size: var(--xlarge-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: 5px;
+}
+
+.swiper-slide .client-details span {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+}
+
+.swiper-slide .client-details p {
+    color: var(--color-02);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-regular);
+    margin-top: 15px;
 }
