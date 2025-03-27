@@ -15,7 +15,7 @@
     --color-05: hsl(var(--hue) 26% 12%);
     --body-color: hsl(250 26% 12%);
     --hover-color: hsl(var(--hue) var(--sat) 67%);
-    --bottom-nav-bg: hsl(var(--hue) 32% 25%) / .65;
+    --bottom-nav-bg: hsl(var(--hue) 32% 25% / .65);
     --card-bg: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
     --modal-backdrop-bg: hsl(var(--hue) 54% 74% / .1);
     --footer-bg: linear-gradient(360deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .1));
@@ -52,7 +52,27 @@
     --z-max: 9999;
 }
 
+.light-theme{
+    --color-01: hsl(var(--hue) 26% 12%);
+    --color-02: hsl(var(--hue) 26% 12%);
+    --color-03: hsl(var(--hue) 45% 98%);
+    --color-04: hsl(var(--hue) 9% 46%);
+    --color-05: hsl(var(--hue) var(--sat) var(--light));
 
+
+    --body-color: hsl(var(--hue) 45% 98%);
+
+    
+    --bottom-nav-bg: hsl(var(--hue) 32% 25% / .8);
+    --card-bg: hsl(0 0% 100%);
+    --modal-backdrop-bg: hsl(var(--hue) 50% 12% / .5);
+
+
+    --footer-bg: linear-gradient(360deg, hsl(var(--hue) var(--sat) var(--light)), hsl(var(--hue) var(--sat) var(--light)/ .75));
+    --scrollbar-color: hsl(var(--hue) 9% 60%);
+    --scrollbar-thumb: hsl(var(--hue) 9% 25%);
+    --scrollbar-thumb-hover: hsl(var(--hue) 9% 17%);
+}
 
 
 * {
@@ -1524,3 +1544,69 @@ body {
     font-size: var(--tiny-font-size);
     font-weight: var(--font-regular);
 }
+
+.sue-footer{
+    background: var(--footer-bg);
+    padding-top: 100px;
+    padding-bottom: 165px;
+}
+.sue-footer .sue-container .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 22px;
+}
+.footer-menu .menu-item a{
+    color: var(--color-01);
+    font-size: calc(var(--tiny-font-size)- .07rem);
+    font-weight: var(--font-normal);
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 15px;
+    transition: .3s;
+
+}
+
+.footer-menu .menu-item a:hover{
+    color: var(--color-03);
+    background: var(--color-01);
+}
+.sue-footer .copy-right{
+    color: var(--color-04);
+    font-size: var(--small-font-size);
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--scrollbar-color);
+}
+::-webkit-scrollbar-thumb{
+    background: scroll;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scrollbar-thumb-hover);
+}
+
+
+/* .theme-btn.active-sun-icon .sun-icon{
+    opacity: 0;
+    transition: .3s;
+}
+
+.theme-btn.active-sun-btn .moon-icon{
+    opacity: 1;
+    transition: .3s;
+}  */
+
+

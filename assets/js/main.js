@@ -1,6 +1,3 @@
-/* =====================================================
-   Resume section tabs and tab contents
-===================================================== */
 
 const resumeTabs = document.querySelector(".resume-tabs");
 const resumePortfolioTabsBtns = resumeTabs.querySelectorAll(".tab-btn");
@@ -73,11 +70,6 @@ serviceCardWithModals.forEach((serviceCardWithModal) => {
 });
 
 
-/* =====================================================
-   Service modal open/close function
-===================================================== */
-// Filter portfolio cards according to portfolio tabs.
-
 document.addEventListener('DOMContentLoaded', () => {
    const portfolioTabs = document.querySelector(".portfolio-tabs");
    const portfolioTabsBtns = portfolioTabs.querySelectorAll(".tab-btn");
@@ -116,9 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* =====================================================
-   Portfolio modals, tabs and cards
-===================================================== */
 const portfolioCardWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
 portfolioCardWithModals.forEach((portfolioCardWithModal) => {
    const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
@@ -149,9 +138,6 @@ portfolioCardWithModals.forEach((portfolioCardWithModal) => {
 
 // Open/Close Portfolio modals.
 
-/* =====================================================
-   Testimonial Swiper
-===================================================== */
 /* var swiper = new Swiper(".sue-client-swiper", {
    slidesPerView: 1,
    spaceBetween: 30,
@@ -166,9 +152,6 @@ portfolioCardWithModals.forEach((portfolioCardWithModal) => {
    },
 });
  */
-/* =====================================================
-   Send/Receive emails from contact form - EmailJS
-===================================================== */
 
 
 
@@ -183,8 +166,8 @@ sueContactForm.addEventListener('submit', function(event) {
          sueContactFormAlert.innerHTML = "<span>Your Message sent Successfully</span>";
          setTimeout(() => {
             
-            sueContactForm.reset();
-         }, 1000);
+            sueContactForm.innerHTML='';
+         }, 5000);
        }, (error) => {
          console.log('FAILED...', error);
          sueContactFormAlert.innerHTML = "<span>Message Not Sent<i class='ri-error-warning-fill'></i></span>";
@@ -192,46 +175,48 @@ sueContactForm.addEventListener('submit', function(event) {
        });
 });
 
-/* =====================================================
-   Shrink the height of the header on scroll
-===================================================== */
+/* window.addEventListener("scroll", ()=>{
+   const navMenuSections = document.querySelectorAll(".nav-menu-section");
+   const scrollY = window.pageYOffset;
+   navMenuSections.forEach((navMenuSection)=>{
+      let sectionHeight = navMenuSection.offsetHeight;
+      let sectionTop=navMenuSection.offsetHeight-50;
+      let id= navMenuSection.getAttribute("id");
+      if(scrollY > sectionTop && scrollY<=sectionTop + sectionHeight){
+         document.querySelector(".bottom-nav .menu li a[href*=*"+id+"]").classList.add('current');
+      }else{
+         document.querySelector(".bottom-nav .menu li a[href*=*"+id+"]").classList.remove('current');
 
-/* =====================================================
-   Bottom navigation menu
-===================================================== */
+      }
+   });
+}); */
 
-// Each bottom navigation menu items active on page scroll.
+window.addEventListener("scroll", () => {
+   const navMenuSections = document.querySelectorAll(".nav-menu-section");
+   const scrollY = window.pageYOffset;
+   
+   navMenuSections.forEach((navMenuSection) => { // Fixed variable name
+      let sectionHeight = navMenuSection.offsetHeight;
+      let sectionTop = navMenuSection.offsetTop - 50; // Fixed sectionTop calculation
+      let id = navMenuSection.getAttribute("id");
 
-// Javascript to show bottom navigation menu on home(page load).
+      let link = document.querySelector(".bottom-nav .menu li a[href*='" + id + "']"); // Fixed selector
 
-// Javascript to show/hide bottom navigation menu on home(scroll).
+      if (link) { // Added null check to prevent errors
+         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            link.classList.add("current");
+         } else {
+            link.classList.remove("current");
+         }
+      }
+   });
+});
 
-// Hide bottom navigation menu on click menu-hide-btn.
+const themeBtn = document.querySelector(".theme-btn");
 
-// Show bottom navigation menu on click menu-show-btn.
+themeBtn.addEventListener("click", ()=>{
+   themeBtn.classList.toggle('active-sun-icon');
+   document.body.classList.toggle('light-theme');
+});
 
-/* =====================================================
-   To-top-button with scroll indicator bar
-===================================================== */
 
-/* =====================================================
-   Customized cursor on mousemove
-===================================================== */
-
-// Cursor effects on hover website elements.
-
-/* =====================================================
-   Website dark/light theme
-===================================================== */
-
-// Change theme and save current theme on click the theme button.
-
-// Get saved theme icon and theme on document loaded.
-
-/* =====================================================
-   ScrollReveal JS animations
-===================================================== */
-
-// Common reveal options to create reveal animations.
-
-// Target elements and specify options to create reveal animations.
