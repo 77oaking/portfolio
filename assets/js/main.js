@@ -2,7 +2,7 @@
 const resumeTabs = document.querySelector(".resume-tabs");
 const resumePortfolioTabsBtns = resumeTabs.querySelectorAll(".tab-btn");
 const resumeTabContents = document.querySelectorAll('.resume-tab-content');
-
+// const dayjs = require('dayjs');
 
 var resumeTabNav = function (resumeTabClick) {
    resumeTabContents.forEach((resumeTabContent) => {
@@ -220,3 +220,10 @@ themeBtn.addEventListener("click", ()=>{
 });
 
 
+//Show Date and Time in header
+function updateTime() {
+   const now = dayjs().format("YYYY-MM-DD HH:mm:ss");
+   document.getElementById("port-time").innerHTML = now;
+ }
+ updateTime();
+ setInterval(updateTime, 1000);

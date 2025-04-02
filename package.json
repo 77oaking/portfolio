@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/77oaking/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/77oaking/portfolio/issues"
+  },
+  "homepage": "https://github.com/77oaking/portfolio#readme",
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "luxon": "^3.6.1",
+    "moment": "^2.30.1"
+  }
+}
