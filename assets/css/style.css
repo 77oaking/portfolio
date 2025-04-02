@@ -1610,3 +1610,8 @@ body {
 }  */
 
 
+#port-time{
+    color: var(--color-02);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-bold);
+}
